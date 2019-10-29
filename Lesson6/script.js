@@ -22,10 +22,9 @@ start();
          }
  }
 
-let question1, question2;
-
 
 //возвращает сумму всех расходов за месяц
+let question1, question2;
 function getExpensesMonth() {
        let sum = 0;
        for (let i = 0; i < 2; i++){
