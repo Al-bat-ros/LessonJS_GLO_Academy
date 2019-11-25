@@ -193,8 +193,6 @@ AppData.prototype.getAddExpInc = function(){
    arr.push(addExpenses_item);
    //console.log(arr);
    arr.forEach(count);
-    console.log(this.addIncome);
-    console.log(this.addExpenses);
 
 };
 
