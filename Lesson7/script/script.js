@@ -173,28 +173,7 @@ AppData.prototype.getInfoDeposit = function(){
     this.percentDeposite = depositPercent.value;
     this.moneyDeposit = depositAmount.value;
 };
-//=========================================================
-
-//  AppData.prototype.getAddIncome = function(){
-    
-//     addIncome_item.forEach(item => {
-//         let itemValue = item.value.trim();
-//         if (itemValue !== ''){
-//             this.addIncome.push(itemValue);
-//         }
-//     });
-//  };
-//  AppData.prototype.getAddExpenses = function(){
-//     let addExpenses = addExpenses_item.value.split(',');
-    
-//     addExpenses.forEach(item => {
-//         item = item.trim();
-//             if (item !== ''){
-//                 this.addExpenses.push(item);
-//             }
-//     });
-// };
-//=========================================================
+//Возможные расходы и доходы
 AppData.prototype.getAddExpInc = function(){
     const arr = [];
     
@@ -203,10 +182,10 @@ AppData.prototype.getAddExpInc = function(){
        const itemIncExp = document.querySelector(`.${startStr}-item`);
       
        if (item.className === 'additional_income-item' && itemIncExp.value !== ''){  
-          this.addIncome.push(item.value);
+          this.addIncome.push(item.value.trim());
  
        }else if(item.className === 'additional_expenses-item' && itemIncExp.value !== ''){
-          this.addExpenses.push(itemIncExp.value);
+          this.addExpenses.push(itemIncExp.value.trim());
        }
     };
 
