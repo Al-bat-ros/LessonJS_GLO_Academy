@@ -38,27 +38,27 @@ let btnStart = document.getElementById('start'),
  let count2 = 0;
  let count1 = 0;
  
-const AppData = function(){
-    this.budget = 0;
-    this.budgetDay = 0;
-    this.budgetManth = 0;
-    this.expensesMonth = 0;
-    this.income = {};
-    this.incomeMonth = 0;
-    this.addIncome = [];
-    this.expenses = {};
-    this.addExpenses = [];
-    this.deposit = false;
-    this.percentDeposite = 0;
-    this.moneyDeposit = 0;
+class AppData {
+    constructor(){
+        this.budget = 0;
+        this.budgetDay = 0;
+        this.budgetManth = 0;
+        this.expensesMonth = 0;
+        this.income = {};
+        this.incomeMonth = 0;
+        this.addIncome = [];
+        this.expenses = {};
+        this.addExpenses = [];
+        this.deposit = false;
+        this.percentDeposite = 0;
+        this.moneyDeposit = 0;
+    }
 }; 
 AppData.prototype.start = function(){
            
     this.budget = +salary_amount.value;
    
     this.getExpInc();
-    // this.getAddExpenses();
-    // this.getAddIncome();
     this.getInfoDeposit();
     this.getAddExpInc();
     this.getBudget();
@@ -251,7 +251,7 @@ AppData.prototype.cancel = function(){
         elems.children[1].value = '';
        }
     //сброс Возможный доход
-    for(let obj of addIncome){ obj.value = '';}
+    for(let obj of addIncome_item){ obj.value = '';}
 
     // Сброс обязательных расходов
     for(let elem of expensesItems){
